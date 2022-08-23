@@ -71,7 +71,11 @@ def server(input, output, session):
             state_ind = "All States"
             temp = pd.DataFrame(states_freq[len(states)][start:end])
         adf = ADF(temp.loc[:, 1])
-        return "Test's P-value:      " + str(adf.pvalue)
+        if adf.pvalue < 0.05:
+            conc = ' (Reject H0, Fires stable in time)'
+        else:
+            conc = ' (Cannot reject H0, Possible addition or reduction of Fires in time)'
+        return state_ind + ", Test's P-value:      " + str(adf.pvalue) + conc
 
     @output
     @render.text
