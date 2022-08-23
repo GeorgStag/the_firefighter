@@ -5,15 +5,15 @@ WebApp for the analysis of fires in US
 
 To run the app:
 - You can download the repository and run the "run.py" script through python
-- You can visit 
--- https://georgstagtest.shinyapps.io/the_firefighter  
+- You can visit \n
+-- https://georgstagtest.shinyapps.io/the_firefighter  \n
 -- https://georgstagtest.shinyapps.io/the_firefighter1
 
 App Architecture:
 The app is placed in "app.py". 
 The UI and server of the app are called through the respective scripts, in "scripts" file.
-There is also the "data_load.py" script that loads the appropriate metadata, calculated from kaggle's database.
--- https://www.kaggle.com/datasets/rtatman/188-million-us-wildfires
+There is also the "data_load.py" script that loads the appropriate metadata, calculated from kaggle's database. \n
+-- https://www.kaggle.com/datasets/rtatman/188-million-us-wildfires \n
 -- https://www.kaggle.com/code/adheep/us-wildfires
 
 Metadata:
