@@ -8,6 +8,7 @@ import pickle
 import seaborn as sns
 sns.set_theme(style="darkgrid")
 from scripts import data_load
+import asyncio
 
 
 
@@ -130,5 +131,35 @@ def server(input, output, session):
     def image():
         img: ImgData = {"src": "logo.png", "width": "500px"}
         return img
+
+    @session.download(
+        filename = lambda: f"Counties_{input.year_rb()}_{input.county_rb()}.csv"
+    )
+    async def down_b():
+        if input.year_rb() == 'All':
+            if input.county_rb() == 't' :
+                temp = top_c[:input.county_n()]
+            else:
+                temp = bott_c[:input.county_n()]
+        elif input.year_rb() == 'ni':
+            if input.county_rb() == 't' :
+                temp = top_c0[:input.county_n()]
+            else:
+                temp = bott_c0[:input.county_n()]
+        elif input.year_rb() == 'tw':
+            if input.county_rb() == 't' :
+                temp = top_c1[:input.county_n()]
+            else:
+                temp = bott_c1[:input.county_n()]
+        else :
+            if input.county_rb() == 't' :
+                temp = top_c2[:input.county_n()]
+            else:
+                temp = bott_c2[:input.county_n()]
+        await asyncio.sleep(0.25)
+        for i in temp:
+            yield i[0]+'\n'
+
+
 
 print("Server Loaded...")

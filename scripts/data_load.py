@@ -139,7 +139,7 @@ try:
     with open('tokens/bott_c2.csv', newline='') as f:
         bott_c2 = csv.reader(f)
         bott_c2 = list(bott_c2)
-    with open('tokens/bott_c.csv', newline='') as f:
+    with open('tokens/top_c.csv', newline='') as f:
         top_c = csv.reader(f)
         top_c = list(top_c)
     with open('tokens/top_c0.csv', newline='') as f:
