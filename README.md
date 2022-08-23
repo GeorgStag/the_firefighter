@@ -22,15 +22,28 @@ As long as, there is connection to the database or access to "dataset.parq" ever
 Assessment needs:
 
 Q1: Have wildfires become more or less frequent over time?
-In the Second tab "Fire Occurancies per Time" there is plot for the fires per year. There are also results for testing the stationarity of the time series.
-The user can check through the test's p-value if the time series is sationary, or else if the fires are ascending or descnding through years, and if this is a case can confirm it visually in the plot above.
+In the Second tab "Fire Occurencies per Time", there is plot for the fires per year. There are also results for testing the stationarity of the time series.
+The user can check through the test's p-value if the time series is stationary, or else if the fires are ascending or descending through years, and if this is a case can confirm it visually in the plot above.
 The plot can be can be saved through right click and the test results can be copied-pasted.
 The plot and test appear for any state and for any time gap between 1992-2015.
 The available state codes appear in the last tab "State Codes".
 
 Q2: What counties are the most and least fire-prone?
-In the Third tab "Counties prone to fire"
+In the Third tab "Counties prone to fire", the user can print the most or least prone counties to fire in specific time gaps. The results are called through the respective token files. The tokens are calculated through the amount of fires per county in specific time gaps.
 
-Q3: Given the size, location and date, can you predict the cause of a wildfire?
-nb:0.37971 ada:0.35832 random:0.32783 log:0.23 perceptron:0.108279
+Q3: Given the size, location and date, can you predict the cause of a wildfire? 
+In the Third tab "Fire Cause Prediction", the cause of fire is predicted given data. The output is the causes sorted based on the probability of happening. For the estimation of probability the AdaBoost algorithm is used from Sci-Kit library. The input is rescaled appropriately to raise the algorithm's adaptability to the data.
 
+Different algorithms' scores, tested for Q3:
+- Categorical Naive Bayes:  0.37971 
+- AdaBoost:                 0.35832 
+- Random Decision Forest:   0.32783 
+- Logistic Regression:      0.23012 
+- Perceptron:               0.10828
+Despite Categorical Naive Bayes having the highest score, it is quite unstable, failing often to predict for non observed cases, so AdaBoost was finally chosen.
+
+Futre work:
+- Give more plotting and cross-plotting options
+- Add testing and algorithm choices
+- The prediction to happen through model selection and more insight to the data.
+- More utilities in County ordering or model predictions given time gap and other information
