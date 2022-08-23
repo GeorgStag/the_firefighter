@@ -9,7 +9,7 @@ app_ui = ui.page_fluid(
     ui.layout_sidebar(
 
         ui.panel_sidebar(
-            div(HTML("<h4> Fire Occurancies in Time: </h4>")),
+            div(HTML("<h4> Fire Occurrences in Time: </h4>")),
             ui.input_slider("time_period_sl", "Time Period (years):", 1992, 2015, [1992,2015]),
             ui.input_text("state_txt", "State:", 'All'),
 
@@ -40,7 +40,7 @@ app_ui = ui.page_fluid(
                         div(HTML("<p> Check the rest of the tabs for the respective analysis resutls. </p>")),
                         ui.output_image("image"),
                        ),
-                ui.nav("Fire Occurancies in Time",  div(HTML("<h3> - </h3>")), ui.output_plot("fotp"), div(HTML("<h5> ----------------------------------------------------------------------------- </h5>")), div(HTML("<h3> Dickey-Fuller Test: </h3>")), div(HTML("<h5> H0: Existence of Unit Root </h5>")), div(HTML("<h5> H1: Time Series being weakly stationary </h5>")), ui.output_text("fot"), div(HTML("<h5> ----------------------------------------------------------------------------- </h5>")), div(HTML("<h5> ----------------------------------------------------------------------------- </h5>")),),
+                ui.nav("Fire Occurrences in Time",  div(HTML("<h3> - </h3>")), ui.output_plot("fotp"), div(HTML("<h5> ----------------------------------------------------------------------------- </h5>")), div(HTML("<h3> Dickey-Fuller Test: </h3>")), div(HTML("<h5> H0: Existence of Unit Root </h5>")), div(HTML("<h5> H1: Time Series being weakly stationary </h5>")), ui.output_text("fot"), div(HTML("<h5> ----------------------------------------------------------------------------- </h5>")), div(HTML("<h5> ----------------------------------------------------------------------------- </h5>")),),
                 ui.nav("Counties prone to fire", div(HTML("<h3> - </h3>")), div(HTML("<h3> - </h3>")), div(HTML("<h3> - </h3>")), div(HTML("<h3> - </h3>")), div(HTML("<h3> - </h3>")), ui.output_text("counties_tb"),),
                 ui.nav("Fire Cause Prediction", div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> - </h5>")), div(HTML("<h5> By Adaptive Boosting (AdaBoost) Classifier, </h5>")), div(HTML("<h5> - </h5>")),ui.output_text("pred") ),
                 ui.nav("State Codes", div(HTML("<h3> State Codes for State in Inputs (Grey Panel): </h3>")),
