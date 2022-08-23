@@ -5,7 +5,7 @@ WebApp for the analysis of fires in US
 
 To run the app:
 - You can download the repository and run the "run.py" script through python
-- You can visit https://georgstagtest.shinyapps.io/the_firefighter
+- You can visit https://georgstagtest.shinyapps.io/the_firefighter  /  https://georgstagtest.shinyapps.io/the_firefighter
 
 App Architecture:
 The app is placed in "app.py". 
