@@ -40,6 +40,7 @@ Different algorithms' scores, tested for Q3:
 - Random Decision Forest:   0.32783 
 - Logistic Regression:      0.23012 
 - Perceptron:               0.10828
+
 Despite Categorical Naive Bayes having the highest score, it is quite unstable, failing often to predict for non observed cases, so AdaBoost was finally chosen.
 
 Futre work:
