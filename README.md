@@ -8,7 +8,6 @@ To run the app:
 
 You can visit: 
 - https://georgstagtest.shinyapps.io/the_firefighter  
-- https://georgstagtest.shinyapps.io/the_firefighter1
 
 App Architecture:
 The app is placed in "app.py". 
