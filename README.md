@@ -1,8 +1,6 @@
 # the_firefighter
 WebApp for the analysis of fires in US
 
--- Assessment for Canonical's hiring procedure --
-
 To run the app:
 - You can download the repository and run the "run.py" script through python
 
